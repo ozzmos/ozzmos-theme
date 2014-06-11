@@ -1,7 +1,7 @@
 @import url ("/usr/share/gnome-shell/theme/gnome-shell.css");
 
+/* Gnome Shell top bar */
 #panel {
-  /* 30% transparency */
   background-color: rgba(0,0,0,0.3); 
 }
 
@@ -13,7 +13,7 @@
 /* top bar menu */
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
-    -arrow-background-color: rgba(255,255,255,1);
+    -arrow-background-color: rgba(255,255,255,0.9);
     color: black;
 }
 
@@ -34,4 +34,65 @@
 .popup-submenu-menu-item:open {
    background-color: #ffffff;
     color: black;
+}
+
+
+.system-menu-action {
+    color: #2c2c2c;
+    border-radius: 32px; /* wish we could do 50% */
+    padding: 13px;
+    border: 1px solid #ccc; /* using rgba() is flaky unfortunately */
+}
+
+.system-menu-action:hover,
+.system-menu-action:focus {
+    color: white;
+    background-color:#56B6EC;
+    border: none;
+    padding: 14px;
+}
+
+
+
+
+.panel-button * { /* To remove the mysterious text-shadow */
+	text-shadow: 0 0 transparent;
+}
+.panel-button {
+	-natural-hpadding: 12px;
+	-minimum-hpadding: 6px;
+	font-weight: bold;
+	/*color: #fff;*/
+	border: 1px solid transparent;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+
+.slider {
+	height: 1em;
+    color: black;
+	-slider-height: 0.1em;
+	-slider-background-color: black;
+	-slider-border-color: #fff;
+	-slider-active-background-color: #336699;
+	-slider-active-border-color: #336699;
+	-slider-border-width: 0px;
+	-slider-handle-radius: 0.5em;
+}
+
+
+.calendar-today {
+	background-color: #56B6EC;
+	font-weight: bold;
+	color: white;
+}
+
+.calendar-day-base:hover,
+.calendar-day-base:focus {
+	background-gradient-direction: vertical;
+	background-gradient-start: rgba(255,255,255,0.2);
+	background-gradient-end: rgba(255,255,255,0.2);
+	color: #2c2c2c;
+	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
 }

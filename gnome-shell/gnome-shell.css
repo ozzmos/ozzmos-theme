@@ -2,7 +2,7 @@
 
 /* Gnome Shell top bar */
 #panel {
-  background-color: rgba(0,0,0,0.3); 
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* remove panel-corner radius */
@@ -14,7 +14,11 @@
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
     -arrow-background-color: rgba(255,255,255,0.9);
-    color: black;
+
+}
+
+.popup-menu-item {
+	color: #636363;
 }
 
 /* top bar menu item:hover */
@@ -23,11 +27,15 @@
     color: white;
 }
 
+.popup-inactive-menu-item, .popup-inactive-menu-item:insensitive {
+	color: #636363;
+}
+
 .popup-sub-menu {
     background-gradient-start: rgba(255,255,255,1);
     background-gradient-end: rgba(255,255,255,1);
     background-gradient-direction: vertical;
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 1px 4px rgba(0,0,0,0.9);
 }
 
 /* When submenu is open */
@@ -62,7 +70,7 @@
 	-natural-hpadding: 12px;
 	-minimum-hpadding: 6px;
 	font-weight: bold;
-	/*color: #fff;*/
+	color: #fff;
 	border: 1px solid transparent;
 	border-top: 0px;
 	border-bottom: 0px;
@@ -71,14 +79,34 @@
 
 .slider {
 	height: 1em;
-    color: black;
+    color: #636363;
 	-slider-height: 0.1em;
 	-slider-background-color: black;
 	-slider-border-color: #fff;
-	-slider-active-background-color: #336699;
-	-slider-active-border-color: #336699;
+	-slider-active-background-color: #56B6EC;
+	-slider-active-border-color: #56B6EC;
 	-slider-border-width: 0px;
 	-slider-handle-radius: 0.5em;
+}
+
+
+.datemenu-date-label {
+    padding: .4em 1.7em;
+    font-weight: bold;
+    text-align: center;
+    color: #636363;
+    border-radius: 4px;
+}
+
+.datemenu-date-label:hover,
+.datemenu-date-label:focus {
+    background-color: #56B6EC;
+    color: #fff;
+}
+
+.datemenu-date-label:active {
+    background-color: #56B6EC;
+    color: #fff;
 }
 
 
@@ -90,9 +118,62 @@
 
 .calendar-day-base:hover,
 .calendar-day-base:focus {
-	background-gradient-direction: vertical;
-	background-gradient-start: rgba(255,255,255,0.2);
-	background-gradient-end: rgba(255,255,255,0.2);
+	background-gradient: none;
 	color: #2c2c2c;
+    background-color: #56B6EC;
 	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+.calendar-day-base:active {
+    font-size: 9pt;
+    background-color: #56B6EC;
+    color: white;
+}
+
+#overview {
+	background-color: rgba(255,255,255,0.1);
+	spacing: 24px;
+}
+
+
+.workspace-thumbnails {
+	spacing: 11px;
+	visible-width: 32px; /* Amount visible before hovering */
+	background-color: rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.5);
+	border: 1px solid rgba(255,255,255,0.05);
+	border-right: 0px;
+	border-radius: 6px 0px 0px 6px;
+	padding: 11px 7px 11px 11px;
+}
+
+
+.modal-dialog {
+	border: 1px solid #aeaeae;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px 0px rgba(0,0,0,0.6);
+	color: #2c2c2c;
+
+	padding-right: 42px;
+	padding-left: 42px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+
+.modal-dialog-button{
+    border-radius: 3px;
+}
+
+.candidate-page-button:hover,
+.notification-button:hover,
+.notification-icon-button:hover,
+.hotplug-notification-item:hover,
+.hotplug-resident-eject-button:hover,
+.modal-dialog-button:hover {
+    background-gradient-start: #e35d4f;
+    background-gradient-end: #e35d4f;
+    color: #fff;
+    border-color: #a92128;
 }
